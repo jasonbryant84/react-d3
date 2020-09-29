@@ -34,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Temperatures with D3</h1>
+      <h1>2017 Temperatures</h1>
+      <h2>{`React & D3`}</h2>
       <select name='city' onChange={e => updateCity(e)}>
         {
           [
