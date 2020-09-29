@@ -31,8 +31,6 @@ export default function Chart(props) {
                     .tickFormat(d => `${d}°F`),
         y2Axis =  d3.axisRight().scale(yScale)
                     .tickFormat(d => `${Math.round(fToC(d))}°C`)
-        
-        console.log('test', fToC(82))
 
     useEffect(()=> {
         // update scales
@@ -59,8 +57,6 @@ export default function Chart(props) {
 
     return (
         <div>
-            <h2>{props.city}</h2>
-            <p>high: {props.temps[0].high}</p>
             <svg width={width} height={height}>
                 <path d={highs} fill='none' stroke={red}/>
                 <path d={lows} fill='none' stroke={blue}/>
